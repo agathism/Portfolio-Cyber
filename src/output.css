@@ -269,8 +269,76 @@ nav.nav {
   gap: 0.8rem;
 }
 .btn-sm {
-  padding: 0.45rem 1rem;
-  font-size: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.7rem;
+  border-radius: 999px;
+}
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.burger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 150;
+  background: var(--bg);
+  @supports (color: color-mix(in lab, red, red)) {
+    background: color-mix(in srgb, var(--bg) 97%, transparent);
+  }
+  backdrop-filter: blur(16px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-menu.open {
+  display: flex;
+}
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+.mobile-menu a {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.mobile-menu a:hover {
+  color: var(--accent);
 }
 .theme-toggle {
   width: 44px;
@@ -945,6 +1013,9 @@ footer p {
   }
   .nav-links {
     display: none;
+  }
+  .burger {
+    display: flex;
   }
   .hero {
     padding: 7rem 1.5rem 4rem;

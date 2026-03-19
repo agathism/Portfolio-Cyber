@@ -6,6 +6,14 @@ function toggleTheme() {
     html.dataset.theme === 'dark' ? '🌙' : '☀️';
 }
 
+// ─── BURGER MENU ───
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const burger = document.querySelector('.burger');
+  menu.classList.toggle('open');
+  burger.classList.toggle('open');
+}
+
 // ─── SCROLL ANIMATIONS ───
 const obs = new IntersectionObserver((entries) => {
   entries.forEach((el) => {

@@ -11,7 +11,7 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <span class="nav-logo">// Portfolio_Dessin_Projet</span>
+    <span class="nav-logo">// Portfolio_DP</span>
     <ul class="nav-links">
       <li><a href="#reconversion">Parcours</a></li>
       <li><a href="#competences">Compétences</a></li>
@@ -19,14 +19,27 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <a href="./CV_Aichatou_Soumare_AFPA_TEBDP.pdf" target="_blank" class="btn btn-grad btn-sm">CV →</a>
+      <a href="./cv.pdf" target="_blank" class="btn btn-grad btn-sm">CV</a>
       <button onclick="toggleTheme()" class="theme-toggle">
         <span class="theme-icon">🌙</span>
+      </button>
+      <button class="burger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#reconversion" onclick="toggleMenu()">Parcours</a></li>
+      <li><a href="#competences" onclick="toggleMenu()">Compétences</a></li>
+      <li><a href="#motivation" onclick="toggleMenu()">Motivation</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+
   <div class="hero">
     <div class="hero-mesh"></div>
     <div class="hero-grid"></div>
@@ -45,7 +58,7 @@
         <p class="hero-desc">
           Je m'appelle <strong>Aichatou Soumaré</strong>. Titulaire d'un <strong>Titre Pro en développement web</strong>,
           je me réoriente vers le dessin de projet en bâtiment — un métier concret, technique et visuel qui correspond exactement à ce que je recherche.
-          Basée à <strong>Lyon</strong>, je prépare la formation <strong>Technicienne d'études du bâtiment – Dessin Projet</strong> à l'AFPA Saint-Priest à partir du 11 mai 2026 et recherche une alternance.
+          Basée à <strong>Lyon</strong>, je prépare la formation <strong>Technicienne d'études du bâtiment – Dessin Projet</strong> à l'AFPA Saint-Priest à partir de mai 2026 et recherche une alternance.
         </p>
         <div class="hero-actions">
           <a href="#contact" class="btn btn-grad">Me contacter →</a>
@@ -70,7 +83,7 @@
           </div>
           <div class="info-row">
             <span class="info-label">FORMATION</span>
-            <span class="info-val">Technicienne d'études du bâtiment – Dessin Projet<br/><span>AFPA Saint-Priest · Alternance · 11 Mai 2026</span></span>
+            <span class="info-val">Technicienne d'études du bâtiment – Dessin Projet<br/><span>AFPA Saint-Priest · Alternance · 11 mai 2026</span></span>
           </div>
           <div class="info-row">
             <span class="info-label">LIEU</span>
@@ -117,7 +130,7 @@
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-date">11 Mai 2026</div>
+        <div class="tl-date">11 mai 2026</div>
         <div class="tl-heading">Formation TEB Dessin Projet — AFPA Saint-Priest (Bac)</div>
         <div class="tl-text">Formation en alternance, niveau Bac, à l'AFPA de Saint-Priest. Objectif : maîtriser AutoCAD, les plans d'exécution, les nomenclatures et la lecture de plans dans un contexte professionnel réel.</div>
       </div>
@@ -166,7 +179,7 @@
       <div class="skill-card">
         <div class="sk-icon">🎯</div>
         <div class="sk-name">Concentration & précision</div>
-        <div class="sk-desc">Je travaille bien seule sur des tâches techniques qui demandent de l'attention au détail — une qualité essentielle en dessin de projet.</div>
+        <div class="sk-desc">Je travaille aussi bien seule qu'en équipe sur des tâches techniques qui demandent de l'attention au détail — une qualité essentielle en dessin de projet.</div>
         <span class="sk-badge badge-v">Acquis</span>
       </div>
     </div>
