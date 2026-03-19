@@ -1,71 +1,93 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio BIM — En Reconversion</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css" />
+  <title>Portfolio — Technicienne d'études du bâtiment</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="./src/output.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- NAV -->
-  <nav>
-    <span class="nav-logo">// BIM_Portfolio</span>
+  <nav class="nav">
+    <span class="nav-logo">// Portfolio_Dessin_Projet</span>
     <ul class="nav-links">
       <li><a href="#reconversion">Parcours</a></li>
       <li><a href="#competences">Compétences</a></li>
       <li><a href="#motivation">Motivation</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="nav-right">
+      <a href="./CV_Aichatou_Soumare_AFPA_TEBDP.pdf" target="_blank" class="btn btn-grad btn-sm">CV →</a>
+      <button onclick="toggleTheme()" class="theme-toggle">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
   </nav>
 
   <!-- HERO -->
   <div class="hero">
-    <div class="hero-grid-bg"></div>
-    <div class="hero-glow"></div>
+    <div class="hero-mesh"></div>
+    <div class="hero-grid"></div>
 
-    <div class="hero-left">
-      <div class="hero-tag">Disponible en alternance</div>
-      <h1>
-        Dev Web<br/>
-        <span class="line-dim">→ future</span><br/>
-        <span class="line-accent">BIM Modeleur</span>
-      </h1>
-      <p class="hero-desc">
-        Je m'appelle <strong>Aichatou Soumaré</strong>. Titulaire d'un <strong>Bac+2 en développement web</strong>,
-        je me réoriente vers la modélisation BIM — un carrefour entre numérique et bâtiment qui me passionne.
-        Basée à <strong>Lyon</strong>, je recherche une alternance dès que possible.
-      </p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Me contacter →</a>
-        <a href="#reconversion" class="btn btn-secondary">Mon parcours</a>
-      </div>
-    </div>
-
-    <div class="hero-right">
-      <div class="terminal">
-        <div class="terminal-bar">
-          <div class="dot dot-r"></div>
-          <div class="dot dot-y"></div>
-          <div class="dot dot-g"></div>
-          <span class="terminal-title">profil.sh</span>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <span class="pulse-dot"></span>
+          Disponible en alternance
         </div>
-        <div class="terminal-body">
-          <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">whoami</span></div>
-          <div class="t-out">→ <span>[Ton Prénom Nom]</span></div>
-          <br/>
-          <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cat formation.txt</span></div>
-          <div class="t-out">→ <span>BIM Modeleur Bac+2 — Hupso</span></div>
-          <div class="t-out">→ <span>Distanciel · Alternance</span></div>
-          <br/>
-          <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cat localisation.txt</span></div>
-          <div class="t-out">→ <span>Lyon, Rhône (69)</span></div>
-          <br/>
-          <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cat status.txt</span></div>
-          <div class="t-out">→ <span style="color: var(--accent);">OPEN TO WORK ✓</span></div>
-          <br/>
-          <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">_<span class="t-cursor"></span></span></div>
+        <h1 class="hero-title">
+          Dev Web<br/>
+          <span class="title-dim">→ future</span><br/>
+          <span class="title-grad">Technicienne d'études du bâtiment</span>
+        </h1>
+        <p class="hero-desc">
+          Je m'appelle <strong>Aichatou Soumaré</strong>. Titulaire d'un <strong>Titre Pro en développement web</strong>,
+          je me réoriente vers le dessin de projet en bâtiment — un métier concret, technique et visuel qui correspond exactement à ce que je recherche.
+          Basée à <strong>Lyon</strong>, je prépare la formation <strong>Technicienne d'études du bâtiment – Dessin Projet</strong> à l'AFPA Saint-Priest à partir du 11 mai 2026 et recherche une alternance.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-grad">Me contacter →</a>
+          <a href="#reconversion" class="btn btn-ghost">Mon parcours</a>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div class="hero-card">
+        <div class="card-header">
+          <div class="dots">
+            <div class="dot dot-r"></div>
+            <div class="dot dot-y"></div>
+            <div class="dot dot-g"></div>
+          </div>
+          <span class="card-title">profil.sh</span>
+        </div>
+        <div class="card-body">
+          <div class="info-row">
+            <span class="info-label">NOM</span>
+            <span class="info-val">Aichatou Soumaré</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">FORMATION</span>
+            <span class="info-val">Technicienne d'études du bâtiment – Dessin Projet<br/><span>AFPA Saint-Priest · Alternance · 11 Mai 2026</span></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">LIEU</span>
+            <span class="info-val">Lyon, Rhône (69)</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">STATUT</span>
+            <span class="status-chip"><span class="pulse-dot"></span>OPEN TO WORK</span>
+          </div>
+          <hr class="card-divider"/>
+          <div class="chips">
+            <span class="chip chip-purple">AutoCAD</span>
+            <span class="chip chip-purple">Revit</span>
+            <span class="chip chip-pink">JavaScript</span>
+            <span class="chip chip-pink">HTML/CSS</span>
+            <span class="chip chip-muted">Git</span>
+          </div>
         </div>
       </div>
     </div>
@@ -74,39 +96,30 @@
   <hr class="divider"/>
 
   <!-- RECONVERSION -->
-  <section id="reconversion">
-    <div class="section-label">// 01 — Parcours</div>
+  <section id="reconversion" class="section">
+    <div class="section-eyebrow">// 01 — Parcours</div>
     <h2 class="section-title">Ma reconversion,<br/>étape par étape</h2>
     <p class="section-sub">
-      Passer du développement web au BIM, ce n'est pas un virage à 180° — c'est une évolution logique vers un métier plus ancré dans le réel, mais toujours digital.
+      Passer du développement web au dessin de projet en bâtiment, ce n'est pas un virage à 180° — c'est une évolution vers un métier concret, visuel et technique qui correspond à ma façon de travailler.
     </p>
-
     <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Bac+2 obtenu</div>
-        <div class="timeline-heading">Développement Web</div>
-        <div class="timeline-text">
-          Formation complète en développement web : HTML/CSS, JavaScript, logique de programmation, gestion de projet numérique. J'y ai développé rigueur, autonomie et appétence pour les outils techniques.
-        </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Titre Pro obtenu</div>
+        <div class="tl-heading">Développeur Web et Web Mobile</div>
+        <div class="tl-text">Formation fullstack avec stage en entreprise : HTML/CSS, JavaScript, PHP, SQL, gestion de projet. J'y ai développé rigueur, autonomie et une vraie aisance avec les outils numériques complexes.</div>
       </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot blue"></div>
-        <div class="timeline-date">Aujourd'hui</div>
-        <div class="timeline-heading">Réorientation vers le BIM</div>
-        <div class="timeline-text">
-          Après avoir découvert le secteur, j'ai décidée de conjuguer mes compétences numériques avec le monde du bâtiment. Le BIM représente exactement ce croisement : rigueur technique, outils 3D, et impact concret sur des projets réels.
-        </div>
+      <div class="tl-item">
+        <div class="tl-dot pink"></div>
+        <div class="tl-date">Aujourd'hui</div>
+        <div class="tl-heading">Réorientation vers le bâtiment</div>
+        <div class="tl-text">Après avoir exploré le marché du développement web, j'ai choisi de me réorienter vers un métier plus ancré dans le concret et le visuel. Le dessin de projet en bâtiment correspond exactement à ce que je recherche : concentration, précision, production tangible.</div>
       </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Prochain objectif</div>
-        <div class="timeline-heading">Formation BIM Modeleur — Hupso (Bac+2)</div>
-        <div class="timeline-text">
-          Formation en alternance, niveau Bac+2, entièrement en distanciel. Objectif : maîtriser Revit, les workflows BIM et la modélisation 3D dans un contexte professionnel réel.
-        </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">11 Mai 2026</div>
+        <div class="tl-heading">Formation TEB Dessin Projet — AFPA Saint-Priest (Bac)</div>
+        <div class="tl-text">Formation en alternance, niveau Bac, à l'AFPA de Saint-Priest. Objectif : maîtriser AutoCAD, les plans d'exécution, les nomenclatures et la lecture de plans dans un contexte professionnel réel.</div>
       </div>
     </div>
   </section>
@@ -114,54 +127,47 @@
   <hr class="divider"/>
 
   <!-- COMPÉTENCES -->
-  <section id="competences">
-    <div class="section-label">// 02 — Compétences</div>
+  <section id="competences" class="section">
+    <div class="section-eyebrow">// 02 — Compétences</div>
     <h2 class="section-title">Ce que j'apporte<br/>dès le premier jour</h2>
-    <p class="section-sub">
-      Mon background en développement web est un vrai atout pour le BIM : logique numérique, outils informatiques complexes, et capacité d'apprentissage rapide.
-    </p>
+    <p class="section-sub">Mon background en développement web est un vrai atout : logique numérique, maîtrise des outils, et capacité d'apprentissage rapide sur des logiciels complexes.</p>
 
     <div class="skills-grid">
       <div class="skill-card">
-        <div class="skill-icon">🧠</div>
-        <div class="skill-name">Logique numérique</div>
-        <div class="skill-desc">Structurer un projet, décomposer un problème, penser en systèmes — des réflexes issus du dev web directement transposables au BIM.</div>
-        <span class="skill-badge badge-green">Acquis</span>
+        <div class="sk-icon">🧠</div>
+        <div class="sk-name">Logique numérique</div>
+        <div class="sk-desc">Structurer un projet, lire une documentation technique, travailler en fichiers organisés — des réflexes issus du dev web directement utiles en bureau d'études.</div>
+        <span class="sk-badge badge-v">Acquis</span>
       </div>
-
       <div class="skill-card">
-        <div class="skill-icon">💻</div>
-        <div class="skill-name">Outils informatiques</div>
-        <div class="skill-desc">À l'aise avec les logiciels complexes, la gestion de fichiers, les environnements techniques. L'apprentissage de Revit sera facilité.</div>
-        <span class="skill-badge badge-green">Acquis</span>
+        <div class="sk-icon">💻</div>
+        <div class="sk-name">Outils informatiques</div>
+        <div class="sk-desc">À l'aise avec les environnements techniques et logiciels complexes. La prise en main d'AutoCAD et des outils de dessin sera facilitée.</div>
+        <span class="sk-badge badge-v">Acquis</span>
       </div>
-
       <div class="skill-card">
-        <div class="skill-icon">🔄</div>
-        <div class="skill-name">Adaptabilité</div>
-        <div class="skill-desc">Choisir de se reconvertir demande de la détermination. Je suis habituée à apprendre de nouveaux langages et outils rapidement.</div>
-        <span class="skill-badge badge-green">Acquis</span>
+        <div class="sk-icon">🔄</div>
+        <div class="sk-name">Adaptabilité</div>
+        <div class="sk-desc">Me reconvertir demande de la détermination. Je suis habituée à apprendre de nouveaux langages et outils — et à le faire vite.</div>
+        <span class="sk-badge badge-v">Acquis</span>
       </div>
-
       <div class="skill-card">
-        <div class="skill-icon">📐</div>
-        <div class="skill-name">Revit / BIM</div>
-        <div class="skill-desc">En cours d'apprentissage. Je me forme activement sur les bases de la modélisation BIM via des ressources en ligne avant même la formation.</div>
-        <span class="skill-badge badge-blue">En apprentissage</span>
+        <div class="sk-icon">📐</div>
+        <div class="sk-name">AutoCAD / Dessin technique</div>
+        <div class="sk-desc">En cours d'apprentissage. Je me forme sur les bases du dessin technique et de la lecture de plans avant même le début de la formation.</div>
+        <span class="sk-badge badge-p">En apprentissage</span>
       </div>
-
       <div class="skill-card">
-        <div class="skill-icon">🧊</div>
-        <div class="skill-name">Modélisation 3D</div>
-        <div class="skill-desc">Initiation à Blender et SketchUp pour comprendre les bases de la spatialisation 3D et la logique de modélisation.</div>
-        <span class="skill-badge badge-blue">En apprentissage</span>
+        <div class="sk-icon">🏗️</div>
+        <div class="sk-name">Connaissance du bâtiment</div>
+        <div class="sk-desc">Initiation aux éléments de construction, terminologie et logique des plans d'exécution via des ressources en ligne.</div>
+        <span class="sk-badge badge-p">En apprentissage</span>
       </div>
-
       <div class="skill-card">
-        <div class="skill-icon">🤝</div>
-        <div class="skill-name">Travail en équipe</div>
-        <div class="skill-desc">Expérience de projets collaboratifs en formation web. À l'aise pour communiquer sur l'avancement et s'intégrer dans une équipe.</div>
-        <span class="skill-badge badge-green">Acquis</span>
+        <div class="sk-icon">🎯</div>
+        <div class="sk-name">Concentration & précision</div>
+        <div class="sk-desc">Je travaille bien seule sur des tâches techniques qui demandent de l'attention au détail — une qualité essentielle en dessin de projet.</div>
+        <span class="sk-badge badge-v">Acquis</span>
       </div>
     </div>
   </section>
@@ -169,74 +175,68 @@
   <hr class="divider"/>
 
   <!-- OUTILS -->
-  <section>
-    <div class="section-label">// 03 — Outils</div>
+  <section class="section">
+    <div class="section-eyebrow">// 03 — Outils</div>
     <h2 class="section-title">Stack technique</h2>
     <p class="section-sub">Outils maîtrisés et en cours d'apprentissage.</p>
 
-    <div class="tools-row">
-      <div class="tool-pill"><span class="status status-learning"></span>Revit</div>
-      <div class="tool-pill"><span class="status status-learning"></span>Blender</div>
-      <div class="tool-pill"><span class="status status-learning"></span>SketchUp</div>
-      <div class="tool-pill"><span class="status status-planned"></span>AutoCAD</div>
-      <div class="tool-pill"><span class="status status-planned"></span>Navisworks</div>
-      <div class="tool-pill"><span class="status status-learned"></span>HTML / CSS</div>
-      <div class="tool-pill"><span class="status status-learned"></span>JavaScript</div>
-      <div class="tool-pill"><span class="status status-learned"></span>Git / GitHub</div>
-      <div class="tool-pill"><span class="status status-planned"></span>ArchiCAD</div>
+    <div class="tools-wrap">
+      <div class="tool-pill pill-learning"><span class="pip pip-on"></span>AutoCAD</div>
+      <div class="tool-pill pill-learning"><span class="pip pip-on"></span>Revit</div>
+      <div class="tool-pill pill-planned"><span class="pip pip-off"></span>ArchiCAD</div>
+      <div class="tool-pill pill-planned"><span class="pip pip-off"></span>Navisworks</div>
+      <div class="tool-pill pill-planned"><span class="pip pip-off"></span>SketchUp</div>
+      <div class="tool-pill pill-mastered"><span class="pip pip-mastered"></span>HTML / CSS</div>
+      <div class="tool-pill pill-mastered"><span class="pip pip-mastered"></span>JavaScript</div>
+      <div class="tool-pill pill-mastered"><span class="pip pip-mastered"></span>Git / GitHub</div>
     </div>
 
-    <p style="margin-top: 1.5rem; font-family: 'Space Mono', monospace; font-size: 0.72rem; color: var(--muted);">
-      <span style="color: var(--accent);">●</span> En apprentissage
-      <span style="color: var(--muted);">●</span> Planifié
-      <span style="color: var(--green);">●</span> Maîtrisé
+    <p class="tools-legend">
+      <span><span style="color: var(--accent)">●</span> En apprentissage</span>
+      <span><span>●</span> Planifié</span>
+      <span><span style="color: #34d399">●</span> Maîtrisé</span>
     </p>
   </section>
 
   <hr class="divider"/>
 
   <!-- MOTIVATION -->
-  <section id="motivation">
-    <div class="section-label">// 04 — Motivation</div>
-    <h2 class="section-title">Pourquoi le BIM ?</h2>
-    <p class="section-sub">Ce qui m'a amené à faire ce choix.</p>
-
-    <div class="motivation-block">
-      <p class="motivation-text">
-        Après mon Bac+2 en développement web, j'ai voulu donner un <strong>ancrage concret</strong> à mes compétences numériques.
-        Le BIM m'a immédiatement attiré : c'est un métier où la <strong>maîtrise des outils digitaux</strong> sert directement
-        la construction réelle — des bâtiments, des infrastructures, des projets qui existent dans le monde physique.
+  <section id="motivation" class="section">
+    <div class="section-eyebrow">// 04 — Motivation</div>
+    <h2 class="section-title">Pourquoi le bâtiment ?</h2>
+    <p class="section-sub">Ce qui m'a amenée à faire ce choix.</p>
+    <div class="motiv-block">
+      <p class="motiv-text">
+        Après mon Titre Pro en développement web, j'ai cherché un métier qui correspond vraiment à ma façon de travailler : <strong>de la concentration, de la précision, un travail visuel et concret</strong>, sans la dimension très sociale et commerciale que j'ai trouvée dans le milieu du développement.
         <br/><br/>
-        Je suis convaincue que mon profil dev web est <strong>un atout différenciant</strong> dans le secteur BIM :
-        là où d'autres partent de zéro sur les outils numériques, je pars avec une logique déjà formée,
-        une capacité à apprendre vite des logiciels complexes, et une vraie <strong>culture du digital</strong>.
+        Le dessin de projet en bâtiment m'a immédiatement attirée : produire des plans d'exécution, travailler sur des projets qui se concrétisent dans le monde réel, maîtriser des outils techniques précis. C'est un métier où <strong>la qualité du travail parle d'elle-même</strong>.
         <br/><br/>
-        Je cherche une entreprise où je pourrai <strong>contribuer dès le premier jour</strong> tout en montant en compétences
-        sur Revit et les workflows BIM aux côtés d'équipes expérimentées.
+        Je suis convaincue que mon profil est <strong>un atout différenciant</strong> : là où d'autres débutent de zéro sur les outils informatiques, j'arrive avec une logique technique déjà formée et une vraie capacité à apprendre vite. Je cherche une entreprise où je pourrai <strong>contribuer concrètement</strong> dès le premier jour, aux côtés d'équipes expérimentées.
       </p>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <div class="contact-section" id="contact">
+  <div class="contact-wrap" id="contact">
     <div class="contact-glow"></div>
-    <div class="section-label">// 05 — Contact</div>
-    <h2 class="section-title">On travaille ensemble ?</h2>
-    <p class="section-sub">Je suis disponible pour une alternance dès que possible sur Lyon et sa région.</p>
+    <div class="section-eyebrow" style="text-align:center">// 05 — Contact</div>
+    <h2 class="contact-title">On travaille ensemble ?</h2>
+    <p class="contact-sub">Je suis disponible pour une alternance dès que possible sur Lyon et sa région.</p>
     <div class="contact-links">
-      <a href="mailto:aichatou.soumare@gmail.com" class="btn btn-primary">✉ aichatou.soumare@gmail.com</a>
-      <a href="https://linkedin.com/in/aichatou-soumare-702085241" class="btn btn-secondary">LinkedIn →</a>
-      <a href="tel:+33612345678" class="btn btn-secondary">📞 06 12 34 56 78</a>
+      <a href="mailto:aicha.smr1@gmail.com" class="btn btn-grad">✉ aicha.smr1@gmail.com</a>
+      <a href="https://www.linkedin.com/in/a%C3%AFchatou-soumar%C3%A9-5514311b3/" target="_blank" class="btn btn-ghost">LinkedIn →</a>
+      <a href="tel:+33768108347" class="btn btn-ghost">📞 07 68 10 83 47</a>
     </div>
   </div>
 
   <!-- FOOTER -->
-  <footer>
-    <p>Aichatou Soumaré — <span class="footer-accent">BIM Modeleur en reconversion</span></p>
-    <p>Lyon, Rhône · <span class="footer-accent">Open to work</span></p>
+  <footer class="footer-centered">
+    <span>
+      <p>Aichatou Soumaré — <span class="grad-text">Technicienne d'études du bâtiment en dessin de projet en reconversion</span></p>
+      <p style="text-align:center">Lyon, Rhône · <span class="grad-text">Open to work</span></p>
+    </span>
   </footer>
 
-  <script src="script.js"></script>
-
+  <script src="./script.js"></script>
 </body>
 </html>
