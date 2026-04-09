@@ -12,6 +12,7 @@ function toggleMenu() {
   const burger = document.querySelector('.burger');
   menu.classList.toggle('open');
   burger.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
 }
 
 // ─── SCROLL ANIMATIONS ───
