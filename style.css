@@ -183,9 +183,7 @@ nav {
   letter-spacing: 0.04em;
   transition: color 0.2s;
 }
-.nav-center a:hover { 
-  color: var(--accent); 
-}
+.nav-center a:hover { color: var(--accent); }
 
 .nav-right {
   display: flex; align-items: center; gap: 1rem;
@@ -577,10 +575,32 @@ hr.divider {
   gap: 1.2rem;
 }
 
+/* La carte est un <a> — on lui applique tous les styles bloc */
+a.project-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.6rem;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(16px);
+}
+a.project-card.vis { opacity: 1; transform: translateY(0); }
+a.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px var(--shadow);
+}
+
+/* Si project-card est encore un div (cas sans lien) */
 .project-card {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .project-card.project-placeholder {
@@ -607,6 +627,8 @@ hr.divider {
   padding: 0.2rem 0.6rem;
   border-radius: 2px;
   transition: background 0.2s;
+  position: relative;
+  z-index: 2;
 }
 .project-link:hover {
   background: color-mix(in srgb, var(--accent) 12%, transparent);
@@ -616,6 +638,7 @@ hr.divider {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
+  color: var(--text);
 }
 
 .project-desc {
@@ -716,7 +739,7 @@ footer p {
 }
 
 footer img {
-  width: 32px; 
+  width: 32px;
   height: 32px;
   transition: filter 0.3s;
 }
@@ -726,6 +749,116 @@ footer img {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* ─── PAGE PROJET DÉTAIL ─── */
+.projet-hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 8rem 3rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.projet-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.projet-hero-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.projet-hero-tags { margin-bottom: 1.5rem; }
+
+.projet-hero-desc {
+  color: var(--text2);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 600px;
+}
+
+.projet-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.projet-cover {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  border: 1px solid var(--border);
+}
+
+.projet-cover img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.projet-section { margin-bottom: 3.5rem; }
+
+.projet-section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.projet-section-text {
+  font-size: 1.05rem;
+  color: var(--text2);
+  line-height: 1.75;
+  max-width: 700px;
+}
+
+.projet-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.projet-gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.projet-gallery-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  transition: transform 0.3s ease;
+}
+
+.projet-gallery-item:hover img { transform: scale(1.03); }
+
+.projet-gallery-label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+  padding: 0.6rem 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+.projet-back {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
 }
 
 /* ─── ANIMATIONS ─── */
@@ -748,4 +881,7 @@ footer img {
   .contact-wrap { padding: 4rem 1.5rem; }
   .burger { display: flex; }
   footer { flex-direction: column; gap: 0.4rem; text-align: center; }
+  .projet-hero { padding: 7rem 1.5rem 3rem; }
+  .projet-main { padding: 2rem 1.5rem; }
+  .projet-gallery { grid-template-columns: 1fr; }
 }

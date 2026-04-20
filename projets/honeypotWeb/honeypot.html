@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="/logos/as.svg" type="image/x-icon">
+  <title>HoneyPot — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/index.html" class="nav-logo">← Portfolio</a>
+    <div class="nav-right">
+      <a href="/CV_Aichatou_Soumare_Alternance_Cyber.pdf" target="_blank" class="btn btn-grad" style="font-size: 0.7rem; padding: 0.35rem 0.9rem; border-radius: 20px;">Voir mon CV</a>
+      <button onclick="toggleTheme()" class="theme-toggle">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO PROJET -->
+  <div class="projet-hero">
+    <div class="hero-mesh"></div>
+    <div class="hero-grid"></div>
+    <div class="projet-hero-inner">
+      <div class="section-eyebrow">// Projet</div>
+      <h1 class="projet-hero-title">HoneyPot</h1>
+      <div class="skills-chips projet-hero-tags">
+        <span class="chip chip-purple">Python</span>
+        <span class="chip chip-purple">Flask</span>
+        <span class="chip chip-muted">2026</span>
+      </div>
+      <p class="projet-hero-desc">
+        Contexte et objectif du projet en quelques phrases. Quel outil, quel language, dans quel cadre (formation, alternance).
+      </p>
+    </div>
+  </div>
+
+  <!-- CONTENU -->
+  <main class="projet-main">
+
+    <!-- COVER -->
+    <div class="projet-cover">
+      <img src="cover.jpg" alt="Image principale du projet"/>
+    </div>
+
+    <!-- CONTEXTE -->
+    <section class="projet-section">
+      <h2 class="projet-section-title">Contexte</h2>
+      <p class="projet-section-text">Décris ici le projet en détail.</p>
+    </section>
+
+    <section class="projet-section">
+      <h2 class="projet-section-title">Ma mission</h2>
+      <p class="projet-section-text">Ce que j'ai concrètement réalisé.</p>
+    </section>
+
+    <!-- GALERIE -->
+    <section class="projet-section">
+      <h2 class="projet-section-title">Photos</h2>
+      <div class="projet-gallery">
+
+        <div class="projet-gallery-item">
+          <img src="cover.jpg" alt="Outil"/>
+          <span class="projet-gallery-label">Outil</span>
+        </div>
+
+        <div class="projet-gallery-item">
+          <img src="cover.jpg" alt="Outil"/>
+          <span class="projet-gallery-label">Outil</span>
+        </div>
+
+        <div class="projet-gallery-item">
+          <img src="cover.jpg" alt="Outil"/>
+          <span class="projet-gallery-label">Outil</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OUTILS -->
+    <section class="projet-section">
+      <h2 class="projet-section-title">Outils utilisés</h2>
+      <div class="skills-chips" style="margin-top: 0.5rem;">
+        <span class="chip chip-purple">Outil</span>
+        <span class="chip chip-muted">Outil</span>
+      </div>
+    </section>
+
+    <!-- RETOUR -->
+    <div class="projet-back">
+      <a href="/index.html#projets" class="btn btn-ghost">← Retour aux projets</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <span style="text-align: center; width: 100%;">
+      <p>Aichatou Soumaré · <span class="grad-text">Technicienne Informatique</span></p>
+      <p>Lyon, Rhône · <span class="grad-text">Open to work</span></p>
+    </span>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

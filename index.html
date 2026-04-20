@@ -21,7 +21,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <a href="cv.pdf" download class="btn btn-ghost">Mon CV</a>
+      <a href="CV_Aichatou_Soumare_Alternance_Cyber.pdf" class="btn btn-ghost">Mon CV</a>
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Changer le thème">
         <span class="theme-icon">☽</span>
       </button>
@@ -288,27 +288,28 @@
 
     <div class="projects-grid">
 
-      <div class="project-card skill-card">
         <div class="project-header">
           <div class="project-icon">🍯</div>
           <div class="project-links">
-            <a href="https://github.com/agathism/honeypot-web" class="project-link" target="_blank">GitHub →</a>
+            <a href="https://github.com/agathism/honeypot-web" 
+              class="project-link" 
+              target="_blank"
+              onclick="event.stopPropagation(); event.preventDefault(); window.open(this.href);">GitHub →</a>
           </div>
         </div>
-        <div class="project-name">Prochain projet: HoneyPot (Prévu)</div>
+        <div class="project-name">HoneyPot</div>
         <p class="project-desc">
-          Site web simulant un serveur vulnérable pour capturer et analyser les tentatives d’intrusion (logs, IP, patterns d’attaque). Dashboard de visualisation avec stockage SQLite
+          Site web simulant un serveur vulnérable pour capturer et analyser les tentatives d'intrusion (logs, IP, patterns d'attaque). Un projet pour mettre en pratique les notions de sécurité réseau et d'analyse de logs.
         </p>
         <div class="project-tags">
           <span class="chip chip-green">Cyber</span>
           <span class="chip chip-purple">Python</span>
-          <span class="chip chip-purple">Linux</span>
+          <span class="chip chip-purple">Flask</span>
           <span class="chip chip-pink">Sécurité défensive</span>
           <span class="chip chip-pink">Analyse de logs</span>
-          <span class="chip chip-pink">Réseau</span>
+          <span class="chip chip-muted">Ngrok</span>
           <span class="chip chip-muted">2026</span>
         </div>
-      </div>
 
       <div class="project-card skill-card">
         <div class="project-header">
