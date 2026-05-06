@@ -14,7 +14,7 @@
   <nav>
     <a href="/index.html" class="nav-logo">← Portfolio</a>
     <div class="nav-right">
-      <a href="CV_Aichatou_Soumare_Alternance_Cyber.pdf" class="btn btn-ghost">Mon CV</a>
+      <a href="CV_Aichatou_Soumare_Alternance_TSSR.pdf" class="btn btn-ghost">Mon CV</a>
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Changer le thème">
         <span class="theme-icon">☽</span>
       </button>
@@ -33,64 +33,93 @@
       <h1 class="projet-hero-title">HoneyPot</h1>
       <div class="skills-chips projet-hero-tags">
         <span class="chip chip-purple">Python</span>
-        <span class="chip chip-purple">Flask</span>
+        <span class="chip chip-purple">JSON</span>
+        <span class="chip chip-purple">Github</span>
         <span class="chip chip-muted">2026</span>
       </div>
-      <p class="projet-hero-desc">
-        Contexte et objectif du projet en quelques phrases. Quel outil, quel language, dans quel cadre (formation, alternance).
-      </p>
     </div>
   </div>
-
+  
   <!-- CONTENU -->
   <main class="projet-main">
-
+    
     <!-- COVER -->
     <div class="projet-cover">
-      <img src="cover.jpg" alt="Image principale du projet"/>
+      <img src="cover.png" alt="Image principale du projet"/>
     </div>
+    
+    <!-- GALERIE -->
+    <section class="projet-section">
+      <h2 class="projet-section-title">Captures</h2>
+      <div class="projet-gallery">
+        <div class="projet-gallery-item">
+          <img src="logs.png" alt="Logs de connexion"/>
+          <span class="projet-gallery-label">Logs de connexion</span>
+        </div>
+        <div class="projet-gallery-item">
+          <img src="cover.jpg" alt="Analyse des IPs"/>
+          <span class="projet-gallery-label">Analyse des IPs</span>
+        </div>
+        <div class="projet-gallery-item">
+          <img src="attempts.png" alt="Dashboard des tentatives"/>
+          <span class="projet-gallery-label">Dashboard des tentatives</span>
+        </div>
+      </div>
+    </section>
 
     <!-- CONTEXTE -->
     <section class="projet-section">
       <h2 class="projet-section-title">Contexte</h2>
-      <p class="projet-section-text">Décris ici le projet en détail.</p>
+      <p class="projet-section-text">
+        Dans le cadre de mon apprentissage en autonomie, j'ai réalisée un projet de cybersécurité orienté 
+        détection d'intrusion : un <strong>honeypot</strong>, littéralement un "pot de miel". 
+        Il s'agit d'un système volontairement exposé sur le réseau, conçu pour attirer et observer 
+        les tentatives d'attaques automatisées ou humaines, sans mettre en danger une infrastructure réelle.
+      </p>
     </section>
 
+    <!-- OBJECTIFS -->
+    <section class="projet-section">
+      <h2 class="projet-section-title">Objectifs</h2>
+      <p class="projet-section-text">
+        Le projet avait pour but de comprendre les mécanismes d'attaque courants (scans de ports, 
+        tentatives de connexion SSH par force brute, injection de commandes) en les observant en conditions réelles. 
+        L'enjeu était de collecter des données sur les comportements malveillants et d'en produire une analyse.
+      </p>
+    </section>
+
+    <!-- MA MISSION -->
     <section class="projet-section">
       <h2 class="projet-section-title">Ma mission</h2>
-      <p class="projet-section-text">Ce que j'ai concrètement réalisé.</p>
+      <p class="projet-section-text">
+        J'ai conçue et déployée un serveur leurre simulant des services vulnérables (SSH, HTTP). 
+        J'ai développé en Python un système de journalisation des tentatives de connexion, 
+        puis <strong>analysé les logs</strong> collectés pour identifier les patterns d'attaque : 
+        origines géographiques, identifiants testés, fréquences et horaires des tentatives.
+      </p>
     </section>
 
-    <!-- GALERIE -->
+    <!-- ARCHITECTURE -->
     <section class="projet-section">
-      <h2 class="projet-section-title">Photos</h2>
-      <div class="projet-gallery">
-
-        <div class="projet-gallery-item">
-          <img src="cover.jpg" alt="Outil"/>
-          <span class="projet-gallery-label">Outil</span>
-        </div>
-
-        <div class="projet-gallery-item">
-          <img src="cover.jpg" alt="Outil"/>
-          <span class="projet-gallery-label">Outil</span>
-        </div>
-
-        <div class="projet-gallery-item">
-          <img src="cover.jpg" alt="Outil"/>
-          <span class="projet-gallery-label">Outil</span>
-        </div>
-
-      </div>
+      <h2 class="projet-section-title">Fonctionnement</h2>
+      <p class="projet-section-text">
+        Le honeypot repose sur un service SSH factice écoutant sur le port standard. 
+        Chaque tentative de connexion est interceptée, horodatée et enregistrée dans un fichier de logs structuré. 
+        Un script Python analyse ensuite ces données pour produire des statistiques : 
+        nombre de tentatives par IP, mots de passe les plus fréquemment utilisés, distribution temporelle des attaques.
+      </p>
     </section>
 
-    <!-- OUTILS -->
+
+    <!-- CE QUE J'AI APPRIS -->
     <section class="projet-section">
-      <h2 class="projet-section-title">Outils utilisés</h2>
-      <div class="skills-chips" style="margin-top: 0.5rem;">
-        <span class="chip chip-purple">Outil</span>
-        <span class="chip chip-muted">Outil</span>
-      </div>
+      <h2 class="projet-section-title">Ce que j'ai appris</h2>
+      <p class="projet-section-text">
+        Ce projet m'a permis de comprendre comment fonctionnent les attaques par force brute 
+        et les scans automatisés à grande échelle. J'ai renforcé mes compétences en scripting Python (grâce à la lecture de documentation et la recherche de solutions sur des forums et des contenus en ligne), 
+        en manipulation de fichiers de logs et en lecture de données réseau. 
+        C'est également ma première expérience pratique en sécurité défensive et en analyse de menaces, ce qui m'a donné une perspective précieuse sur les défis de la cybersécurité. 
+      </p>
     </section>
 
     <!-- RETOUR -->
